@@ -1,0 +1,37 @@
+name: X Digest Bot
+
+on:
+  schedule:
+    # প্রতিদিন রাত ৯টা (IST)
+    - cron: '30 15 * * *'
+  workflow_dispatch:
+
+jobs:
+  run-digest:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install libraries
+        # google-genai, requests এবং feedparser ইনস্টল করা হলো
+        run: pip install google-genai requests feedparser
+
+      - name: Run script
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          # Gmail Settings
+          EMAIL_USER: ${{ secrets.EMAIL_USER }}
+          EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+          # যাকে মেইল পাঠানো হবে (তোমার ইমেইল)
+          EMAIL_RECIPIENT: ${{ secrets.EMAIL_TO }} 
+        run: python main.py
+        
