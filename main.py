@@ -26,15 +26,25 @@ ACCOUNTS = [
 # --- 🌍 Nitter Instances ---
 NITTER_INSTANCES = [
     "https://nitter.privacyredirect.com",
+    "https://rss.xcancel.com",
     "https://nitter.lucabased.xyz",
     "https://nitter.net",
+    "https://nitter.cz",
+    "https://nitter.it",
     "https://nitter.poast.org",
     "https://nitter.privacydev.net",
     "https://nitter.projectsegfau.lt",
     "https://nitter.eu",
     "https://nitter.soopy.moe",
+    "https://nitter.rawbit.ninja",
+    "https://nitter.d420.de",
+    "https://nitter.x86-64-unknown-linux-gnu.zip",
     "https://nitter.moomoo.me",
-    "https://nitter.no-logs.com"
+    "https://nitter.woodland.cafe",
+    "https://nitter.no-logs.com",
+    "https://nitter.perennialte.ch",
+    "https://nitter.freeredit.eu",
+    "https://nitter.adminforge.de"
 ]
 
 # --- Setup Keys (No Telegram) ---
