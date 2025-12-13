@@ -20,8 +20,8 @@ jobs:
           python-version: '3.11'
 
       - name: Install libraries
-        # requests, feedparser
-        run: pip install requests feedparser
+        # requests, feedparser, markdown
+        run: pip install -r requirements.txt
 
       - name: Run script
         env:
