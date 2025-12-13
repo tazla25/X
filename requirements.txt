@@ -1,0 +1,4 @@
+google-genai
+markdown
+requests
+feedparser
