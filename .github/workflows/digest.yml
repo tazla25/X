@@ -20,7 +20,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install libraries
-        # google-genai, requests এবং feedparser ইনস্টল করা হলো
+        # google-genai লাইব্রেরি এবং অন্যান্য ডিপেন্ডেন্সি
         run: pip install google-genai requests feedparser
 
       - name: Run script
@@ -31,7 +31,5 @@ jobs:
           # Gmail Settings
           EMAIL_USER: ${{ secrets.EMAIL_USER }}
           EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
-          # যাকে মেইল পাঠানো হবে (তোমার ইমেইল)
           EMAIL_RECIPIENT: ${{ secrets.EMAIL_TO }} 
         run: python main.py
-        
