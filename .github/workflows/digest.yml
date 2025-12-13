@@ -20,15 +20,13 @@ jobs:
           python-version: '3.11'
 
       - name: Install libraries
-        # google-genai লাইব্রেরি এবং অন্যান্য ডিপেন্ডেন্সি
+        # requests, feedparser, google-genai
         run: pip install google-genai requests feedparser
 
       - name: Run script
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          # Gmail Settings
+          # Gmail Settings Only
           EMAIL_USER: ${{ secrets.EMAIL_USER }}
           EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
           EMAIL_RECIPIENT: ${{ secrets.EMAIL_TO }} 
