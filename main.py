@@ -26,12 +26,18 @@ ACCOUNTS = [
 # --- 🌍 Nitter Instances ---
 NITTER_INSTANCES = [
     "https://nitter.privacyredirect.com",
+    "https://nitter.poast.org",
+    "https://xcancel.com",
+    "https://lightbrd.com",
+    "https://nitter.space",
+    "https://nitter.tiekoetter.com",
+    "https://nuku.trabun.org",
+    "https://nitter.catsarch.com",
     "https://rss.xcancel.com",
     "https://nitter.lucabased.xyz",
     "https://nitter.net",
     "https://nitter.cz",
     "https://nitter.it",
-    "https://nitter.poast.org",
     "https://nitter.privacydev.net",
     "https://nitter.projectsegfau.lt",
     "https://nitter.eu",
@@ -58,7 +64,7 @@ client = genai.Client(api_key=GEMINI_KEY)
 # --- 1. Find Working Nitter Instance ---
 def get_working_nitter_instance():
     print("🔍 Searching for a working Nitter instance...")
-    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
+    headers = {"User-Agent": "Mozilla/5.0 (Compatible; RSS Reader)"}
 
     for url in NITTER_INSTANCES:
         try:
