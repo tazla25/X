@@ -20,12 +20,14 @@ jobs:
           python-version: '3.11'
 
       - name: Install libraries
-        run: pip install -r requirements.txt
+        run: |
+          pip install --upgrade pip
+          pip install requests feedparser google-genai
+          pip list
 
       - name: Run script
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          # Gmail Settings Only
           EMAIL_USER: ${{ secrets.EMAIL_USER }}
           EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
           EMAIL_RECIPIENT: ${{ secrets.EMAIL_TO }} 
